@@ -173,7 +173,7 @@ def build_address_lines(num_voie: str, nom_rue: str) -> tuple[str, str, str]:
 # --------- Main processing --------- #
 
 # --------- CONFIG ---------
-BASE_DIR = Path(__file__).resolve().parents[1]  # .../PY_SEPA_ALLER
+BASE_DIR = Path(__file__).resolve().parents[1]  # .../PY_WITHDRAWAL_OUTBOUND
 CONFIG_PATH = BASE_DIR / "config.ini"
 
 if not CONFIG_PATH.exists():
