@@ -158,7 +158,7 @@ def convert_yyyymmddhhmmss_to_iso_datetime(date_str: str, tz_offset: str = "+02:
 # --------- Main processing --------- #
 
 # --------- CONFIG ---------
-BASE_DIR = Path(__file__).resolve().parents[1]  # .../PY_SEPA_ALLER
+BASE_DIR = Path(__file__).resolve().parents[1]  # .../PY_WITHDRAWAL_OUTBOUND
 CONFIG_PATH = BASE_DIR / "config.ini"
 
 if not CONFIG_PATH.exists():
