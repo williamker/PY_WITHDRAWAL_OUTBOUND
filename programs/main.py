@@ -9,7 +9,7 @@ from pathlib import Path
 
 # ---------------------- LOG GLOBAL ----------------------
 # ---------------------- CONFIG ----------------------
-BASE_DIR = Path(__file__).resolve().parents[1] # dossier PY_SEPA_ALLER
+BASE_DIR = Path(__file__).resolve().parents[1] # dossier PY_WITHDRAWAL_OUTBOUND
 CONFIG_PATH = BASE_DIR / "config.ini"
 
 if not CONFIG_PATH.exists():
@@ -32,7 +32,7 @@ programs_dir   = config.get(path_section, "programs_dir")
 
 # ---------------------- LOG GLOBAL ----------------------
 os.makedirs(LOG_DIR, exist_ok=True)
-log_path = os.path.join(LOG_DIR, f"PY_SEPA_ALLER_{datetime.now().strftime('%Y%m%d')}.log")
+log_path = os.path.join(LOG_DIR, f"PY_WITHDRAWAL_OUTBOUND_{datetime.now().strftime('%Y%m%d')}.log")
 
 def log_global(msg: str):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -106,7 +106,7 @@ for fichier in fichiers_sources:
 
 log_global("===== RÉCAPITULATIF TRAITEMENT SEPA_ALLER =====")
 
-log_global(f"Démarrage PY_SEPA_ALLER - ENV={ENV}")
+log_global(f"Démarrage PY_WITHDRAWAL_OUTBOUND - ENV={ENV}")
 log_global(f"Sources  : {chemin_sources}")
 log_global(f"TMP      : {tmp_dir}")
 log_global(f"Output   : {output_dir}")
